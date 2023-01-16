@@ -1,3 +1,12 @@
+"""
+This doesn't work in all cases, cause i cant make an empty list of size n for fmin, fmax etc, i have to fill it 
+with minimum and amx values 
+none doesn't work 
+neither filling max with 0 and min with 1e9 
+
+if you know how to fix this let me know.....
+"""
+
 T= int(input())
 for i in range(0,T):
     n=int(input())

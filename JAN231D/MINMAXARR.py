@@ -1,3 +1,9 @@
+"""
+Used binary search here after learning it for a couple of days so please ignore my idiotic errors
+
+"""
+
+
 def solve(n,m,mid):
     l=m.copy()
     if l[0]>mid:
@@ -12,9 +18,7 @@ def solve(n,m,mid):
     #maxi=max(l)
     if max(l)>mid:
         return False
-    
-    
-    
+
     return True
 
 
