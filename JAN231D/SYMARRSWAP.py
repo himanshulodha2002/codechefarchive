@@ -30,18 +30,26 @@ for i in range(0,T):
     i=1
     
 
-    fmin=[a[0]]*n
-    fmax=[a[0]]*n
-    lmin=[b[n-1]]*n
-    lmax=[b[n-1]]*n
+    fmin=[a[0]]
+    fmax=[a[0]]
+    lmin=[b[n-1]]
+    lmax=[b[n-1]]
     
     for i in range(0,n):
-        fmin[i]=min(fmin[i-1],a[i])
-        fmax[i]=max(fmax[i-1],a[i])
+        fmin.insert(i,min(fmin[i-1],a[i]))
+        fmax.insert(i,max(fmax[i-1],a[i]))
+
+
+        #fmin[i]=min(fmin[i-1],a[i])
+        #fmax[i]=max(fmax[i-1],a[i])
     i=n-2    
     while i>=0:
-        lmin[i]=min(lmin[i+1],b[i])
-        lmax[i]=max(lmax[i+1],b[i])
+        lmin.insert(i,min(lmin[i+1],b[i]))
+        lmax.insert(i,max(lmax[i+1],b[i]))
+
+
+        #lmin[i]=min(lmin[i+1],b[i])
+        #lmax[i]=max(lmax[i+1],b[i])
         i-=1
     
     ans=maxi-mini
